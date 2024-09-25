@@ -1,0 +1,16 @@
+/* Arrow styling */
+.arrow {
+    display: inline-block;
+    transition: transform 1s ease-out, color 1s ease-out; /* 1s duration for transform and color */
+    color: lightgray; /* Initial color */
+  }
+  
+  .arrow-open {
+    color: black; /* Color when dropdown is open */
+  }
+  
+  /* Rotation effect */
+  .rotate-arrow {
+    transform: rotate(180deg); /* Rotate 180 degrees to point upwards */
+  }
+  

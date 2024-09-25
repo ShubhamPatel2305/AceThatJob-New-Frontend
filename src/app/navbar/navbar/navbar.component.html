@@ -1,0 +1,31 @@
+<nav class="bg-white">
+    <div class="relative w-full mx-auto flex items-center justify-between">
+      <div class="flex">
+        <a href="/" class="cursor-pointer py-5 px-7">
+          <img src="https://cdn.prod.website-files.com/66a9edf7bd0139f5207e19be/66e1a30a9a12f4c1d2bb3e9f_heygen-logotype.svg" alt="Logo">
+        </a>
+  
+        <ul class="flex justify-between space-x-5">
+          <li class="group relative" *ngFor="let open of dropdownOpen; let i = index">
+            <a href="#" class="flex items-center py-7 text-xs text-black hover:text-vio cursor-pointer" (click)="toggleDropdown(i)">
+              Payments
+              <span [ngClass]="{'rotate-arrow': dropdownOpen[i], 'arrow-open': dropdownOpen[i]}" class="ml-2 arrow transition-transform">▼</span>
+            </a>
+  
+            <!-- Dropdown -->
+            <ul *ngIf="dropdownOpen[i]" class="dropdown absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md p-3 space-y-2">
+              <li><a href="#" class="block text-sm text-gray-700 hover:text-vio">Option 1</a></li>
+              <li><a href="#" class="block text-sm text-gray-700 hover:text-vio">Option 2</a></li>
+              <li><a href="#" class="block text-sm text-gray-700 hover:text-vio">Option 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="flex space-x-4 px-7">
+        <button class="bg-black text-white hover:bg-vio font-bold text-sm px-5 py-2 rounded-3xl">Sign up for free</button>
+        <button class="bg-btngray text-black hover:bg-vio hover:text-white font-semibold text-sm px-5 py-2 rounded-3xl">Join us</button>
+      </div>
+    </div>
+  </nav>
+  
